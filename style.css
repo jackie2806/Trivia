@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    text-shadow: 25px;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: hsl(208, 27%, 90%);
+}
+.main__welcome{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.main__welcome .main__welcome__img{
+    flex-grow: 50;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main__welcome .main__welcome__quotation{
+    flex-grow: 50;
+    margin-left: 50px;
+    margin-top: 120px;
+}
+
+.main__welcome__quotation .main__welcome__quotation__name{
+    flex-direction: row;
+    margin-top: 150px;
+}
+.main__welcome__quotation .main__welcome__quotation__name{
+    flex-direction: row;
+}
+
+#header{
+    text-align: center;
+    margin-top: 80px;
+}
+
+#i_name{
+    background-color:aliceblue;
+    margin-left: 100px;
+    margin-top: 80px;
+    width: 300px;
+    height: 30px;
+    
+}
+#btn_start {
+    background-color:aliceblue;
+    margin-left: 90px;
+    margin-top: 70px;
+    width: 100px;
+    height: 30px;
+    border-radius: 15PX;
+}
+
+#btn_verify{
+    background-color: aliceblue;
+    margin-left: 700px;
+    margin-top: 30px;
+    width: 100px;
+    height: 30px;
+    border-radius: 15PX;
+}
+
+#img{
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+h4 {
+    text-align: right;
+    margin-top: 20px;
+}
+
+h3{
+    margin-top: 20px;
+}
+
+.main__quiz__form{
+    margin-top: 150px;
+    text-align: left;
+}
+
+.main__quiz__form{
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.main__quiz__form__one .main__quiz__form__two .main__quiz__form__three .main__quiz__form__four .main__quiz__form__five{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    
+}
+p{
+    margin-top: 15px;
+}
+input {
+    margin-left: 10px;
+}
+
+.main__welcome{
+    margin-top: 50px;
+    margin-left: 30px;
+    text-align: justify;
+}
+.main__quiz__form__btn{
+    margin-left: 700px;
+}
