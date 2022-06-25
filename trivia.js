@@ -11,8 +11,7 @@ function start(){
     //w.style.display= "none";
     
     //w.textContent = q;
-       
-    
+           
 }
 
 function check(){
@@ -44,3 +43,5 @@ function check(){
     quiz.textContent= `Tu puntuación es `+ ` ` +`${c}`;
     //document.write(c);
 }    
+
+// Todo salió aparentemente bien 
