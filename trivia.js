@@ -46,4 +46,4 @@ function check(){
 
 // Todo salió aparentemente bien 
 
-// Otra vez 
+// Otra vez estoy arreglando esto 
