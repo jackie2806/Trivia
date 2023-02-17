@@ -26,7 +26,6 @@ function check(){
     let q4= document.quiz.question4.value;
     let q5= document.quiz.question5.value;
     let quiz = document.getElementById("quiz");
-    //let result = document.getElementById("result")
     
     if(q1=="correct"){
         c++
@@ -49,8 +48,8 @@ function check(){
         
     };    
     
-    quiz.textContent= `Tu puntuación es `+ ` ` +`${c}`;
-    //document.write(c);
+    quiz.innerHTML= `Tu puntuación es `+ ` ` +`${c}`;
+
 }    
 
 
