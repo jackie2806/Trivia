@@ -10,6 +10,8 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: hsl(208, 27%, 90%);
 }
+
+/* 
 .main__welcome{
     display: inline-flex;
     flex-wrap: wrap;
@@ -110,4 +112,4 @@ input {
 }
 .main__quiz__form__btn{
     margin-left: 700px;
-}
+} */

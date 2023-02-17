@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EconoTrivia</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Econo-Trivia</title>
+    <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
     <main id="main" class="main">
-        <div id="header" class="main__welcome__header">
-            <h1 class="main__header__title"> ECONOTRIVIA </h1>
-            <h3 class="main__header__text">La trivia para aprender economía desde otra perspectiva</h3>
-        </div> 
+ 
        
         <section name="welcome" id="welcome" class="main__welcome">
-          
-            <figure class="main__welcome__img">
+
+            <div id="header" class="main__welcome__header">
+                <h1 class="main__header__title"> ECONOTRIVIA </h1>
+                <h3 class="main__header__text">La trivia para aprender economía desde otra perspectiva</h3>
+            </div> 
+
+           <!--  <div class="main__welcome__img">
                 <img id="img" src="./img/econo.png" alt="texto descriptivo">
-            </figure>    
+            </div> -->
+            
+                                
             <div name="quotation" id="quotation" class="main__welcome__quotation">
-                <h4 > "El estudio de la economía es intrínsecamente recomendable, <br> además de muy interesante, porque afecta a todos los actos humanos" </h4>
-                <h4 > Jordi Franch Parella</h4>
+                <div>
+                    <h4 > "El estudio de la economía es intrínsecamente recomendable, <br> además de muy interesante, porque afecta a todos los actos humanos" </h4>
+                    <h4 > Jordi Franch Parella</h4>
+                </div>
+               
 
-                    <input name="name" id="i_name" type="text" class="main__welcome__quotation__name" placeholder="Ingresa tu nombre">
+                <input name="name" id="i_name" type="text" class="main__welcome__quotation__name" placeholder="Ingresa tu nombre">
 
-                    <button id="btn_start" class="main__welcome__quotation__btn" onclick="start()">Empezar</button>
-                             
+                <button id="btn_start" class="main__welcome__quotation__btn" onclick="start()">Empezar</button>                             
     
             </div>
            
@@ -34,45 +40,46 @@
         </section>
 
         <section id="quiz" clas="main__quiz">
-            
+            <div id="name-player">
+
+            </div>
             <form name="quiz" id="form" class="main__quiz__form">
                 
                 <div id="q1" class="main__quiz__form__one">
                     <p> 1. ¿Qués el coste de oportunidad? </p>
-                    <p> <input type="radio" name="question1" value="Es el valor de la mejor alternativa rechazada">A. Es el valor de la mejor alternativa rechazada </p>
-                    <p> <input type="radio" name="question1" value="Es el valor de la peor alternativa rechazada">B. Es el valor de la peor alternativa rechazada </p>
-                    <p> <input type="radio" name="question1" value="Es el valor para alcanzar un fin">C. Es el valor para alcanzar un fin </p>
+                    <p> <input type="radio" name="question1" value="correct">A. Es el valor de la mejor alternativa rechazada </p>
+                    <p> <input type="radio" name="question1" value="">B. Es el valor de la peor alternativa rechazada </p>
+                    <p> <input type="radio" name="question1" value="">C. Es el valor para alcanzar un fin </p>
                 </div>
                 <div id="q2" class="main__quiz__form__two">
                     <p> 2. ¿Qué es un bien de consumo? </p>
-                    <p> <input type="radio" name="question2" v5alue="No satisface directamente una necesidad humana">A. No satisface directamente una necesidad humana</p>
-                    <p> <input type="radio" name="question2" v5alue="Satisface indirectamente una necesidad humana">B. Satisface indirectamente una necesidad humana</p>
-                    <p> <input type="radio" name="question2" v5alue="Satisface directamente una necesidad humana">C. Satisface directamente una necesidad humana</p>
+                    <p> <input type="radio" name="question2" value="">A. No satisface directamente una necesidad humana</p>
+                    <p> <input type="radio" name="question2" value="">B. Satisface indirectamente una necesidad humana</p>
+                    <p> <input type="radio" name="question2" value="correct">C. Satisface directamente una necesidad humana</p>
                 </div>
                 <div id="q3" class="main__quiz__form__three">
                     <p> 3. ¿Qué es un bien de capital? </p>
-                    <p> <input type="radio" name="question3" value="No contribuye a aumentar la producción de bienes de consumo">A. No contribuye a aumentar la producción de bienes de consumo</p>
-                    <p> <input type="radio" name="question3" value="Contribuye a reducir la producción de bienes de consumo">B. Contribuye a reducir la producción de bienes de consumo</p>
-                    <p> <input type="radio" name="question3" value="Contribuye a aumentar la producción de bienes de consumo">C. Contribuye a aumentar la producción de bienes de consumo</p>
+                    <p> <input type="radio" name="question3" value="">A. No contribuye a aumentar la producción de bienes de consumo</p>
+                    <p> <input type="radio" name="question3" value="">B. Contribuye a reducir la producción de bienes de consumo</p>
+                    <p> <input type="radio" name="question3" value="correct">C. Contribuye a aumentar la producción de bienes de consumo</p>
                 </div>
                 <div id="q4" class="main__quiz__form__four">
                     <p> 4.  ¿Qué es la utilidad marginal</p>
-                    <p> <input type="radio" name="question4" value="Es la insatisfacción que proporciona a un consumidor el consumo de un bien determinado">A. Es la insatisfacción que proporciona a un consumidor el consumo de un bien determinado</p>
-                    <p> <input type="radio" name="question4" value="Es la satisfacción que proporciona a un productor el consumo de un bien determinado">B. Es la satisfacción que proporciona a un productor el consumo de un bien determinado</p>
-                    <p> <input type="radio" name="question4" value="Es la satisfacción que proporciona a un consumidor el consumo de un bien determinado">C. Es la satisfacción que proporciona a un consumidor el consumo de un bien determinado</p>
+                    <p> <input type="radio" name="question4" value="">A. Es la insatisfacción que proporciona a un consumidor el consumo de un bien determinado</p>
+                    <p> <input type="radio" name="question4" value="">B. Es la satisfacción que proporciona a un productor el consumo de un bien determinado</p>
+                    <p> <input type="radio" name="question4" value="correct">C. Es la satisfacción que proporciona a un consumidor el consumo de un bien determinado</p>
                 </div>
                 <div id="q5" class="main__quiz__form__five">
                     <p> 5.  ¿Qué es el equilibrio en el mercado?</p>
-                    <p> <input type="radio" name="question5" value="Se produce cuando los planes de los compradores y de los vendedores se hacen compatibles">A. Se produce cuando los planes de los compradores y de los vendedores se hacen compatibles</p>
-                    <p> <input type="radio" name="question5" value="Se produce cuando las inversiones de los compradores y de los vendedores se hacen compatibles">B. Se produce cuando las inversiones de los compradores y de los vendedores se hacen compatibles</p>
-                    <p> <input type="radio" name="question5" value="Se produce cuando los planes de los compradores y de los vendedores se hacen incompatibles">C. Se produce cuando los planes de los compradores y de los vendedores se hacen incompatibles</p>
+                    <p> <input type="radio" name="question5" value="correct">A. Se produce cuando los planes de los compradores y de los vendedores se hacen compatibles</p>
+                    <p> <input type="radio" name="question5" value="">B. Se produce cuando las inversiones de los compradores y de los vendedores se hacen compatibles</p>
+                    <p> <input type="radio" name="question5" value="">C. Se produce cuando los planes de los compradores y de los vendedores se hacen incompatibles</p>
                 </div>
                 
                 <input id="btn_verify" class="main__quiz__form__btn" type="submit" value="Verificar" onclick="check()">
             </form>
 
-           
-            
+                       
         </section>
        
         
@@ -80,5 +87,5 @@
     </main>
     
 </body>
-<script src="trivia.js"> </script>
+<script src="/src/trivia.js"> </script>
 </html>
