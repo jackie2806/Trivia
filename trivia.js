@@ -1,13 +1,16 @@
 let w = document.getElementById("welcome");
 let n= document.getElementById("i_name");
 let q= document.getElementById("form");
+q.style.display ="none";
 
 
 function start(){
     if(n.value !=0 ){
         w.textContent= "Hola,"+" " +n.value+ "!!!";
     }
-
+    w.style.display= "none";
+    n.style.display = "none";
+    q.style.display = "flex";
     //w.style.display= "none";
     
     //w.textContent = q;
@@ -44,6 +47,3 @@ function check(){
     //document.write(c);
 }    
 
-// Todo salió aparentemente bien 
-
-// Otra vez estoy arreglando esto 
