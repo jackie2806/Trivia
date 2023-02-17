@@ -1,26 +1,25 @@
 let w = document.getElementById("welcome");
 let n= document.getElementById("i_name");
-let q= document.getElementById("form");
+let q= document.getElementById("quiz");
 q.style.display ="none";
 
 
 function start(){
     if(n.value !=0 ){
-        w.textContent= "Hola,"+" " +n.value+ "!!!";
+        let nameOfPlayer = document.getElementById("name-player");       
+        nameOfPlayer.innerHTML= "Hola,"+ " " + n.value;
+        w.style.display = "none";
+        q.style.display = "block"; 
+    } else {
+        alert("Ingresa tu nombre para empezar")
     }
-    w.style.display= "none";
-    n.style.display = "none";
-    q.style.display = "flex";
-    //w.style.display= "none";
-    
-    //w.textContent = q;
-           
+                 
 }
 
 function check(){
+
     let c= 0;
-    let uno = document.getElementById("uno-uno").value;
-    console.log(uno)
+    console.log(c)
     let q1= document.quiz.question1.value;
     let q2= document.quiz.question2.value;
     let q3= document.quiz.question3.value;
@@ -29,23 +28,29 @@ function check(){
     let quiz = document.getElementById("quiz");
     //let result = document.getElementById("result")
     
-    if(q1=="Es el valor de la mejor alternativa rechazada"){
+    if(q1=="correct"){
         c++
+    
     };
-    if(q2=="Satisface directamente una necesidad humana"){
+    if(q2=="correct"){
         c++
+    
     };
-    if(q3=="Contribuye a aumentar la producción de bienes de consumo"){
+    if(q3=="correct"){
         c++
+    
     };
-    if(q4=="Es la satisfacción que proporciona a un consumidor el consumo de un bien determinado"){
+    if(q4=="correct"){
         c++
+    
     };
-    if(q5=="Se produce cuando los planes de los compradores y de los vendedores se hacen compatibles"){
+    if(q5=="correct"){
         c++
-    };
+        
+    };    
     
     quiz.textContent= `Tu puntuación es `+ ` ` +`${c}`;
     //document.write(c);
 }    
+
 
