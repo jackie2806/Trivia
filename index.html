@@ -9,23 +9,30 @@
 </head>
 <body>
     <main id="main" class="main">
-        <div id="header" class="main__welcome__header">
-            <h1 class="main__header__title"> ECONOTRIVIA </h1>
-            <h3 class="main__header__text">La trivia para aprender economía desde otra perspectiva</h3>
-        </div> 
+ 
        
         <section name="welcome" id="welcome" class="main__welcome">
-          
-            <figure class="main__welcome__img">
+
+            <div id="header" class="main__welcome__header">
+                <h1 class="main__header__title"> ECONOTRIVIA </h1>
+                <h3 class="main__header__text">La trivia para aprender economía desde otra perspectiva</h3>
+            </div> 
+
+            <div class="main__welcome__img">
                 <img id="img" src="./img/econo.png" alt="texto descriptivo">
-            </figure>    
+            </div>
+            
+                                
             <div name="quotation" id="quotation" class="main__welcome__quotation">
-                <h4 > "El estudio de la economía es intrínsecamente recomendable, <br> además de muy interesante, porque afecta a todos los actos humanos" </h4>
-                <h4 > Jordi Franch Parella</h4>
+                <div>
+                    <h4 > "El estudio de la economía es intrínsecamente recomendable, <br> además de muy interesante, porque afecta a todos los actos humanos" </h4>
+                    <h4 > Jordi Franch Parella</h4>
+                </div>
+               
 
-                    <input name="name" id="i_name" type="text" class="main__welcome__quotation__name" placeholder="Ingresa tu nombre">
+                <input name="name" id="i_name" type="text" class="main__welcome__quotation__name" placeholder="Ingresa tu nombre">
 
-                    <button id="btn_start" class="main__welcome__quotation__btn" onclick="start()">Empezar</button>                             
+                <button id="btn_start" class="main__welcome__quotation__btn" onclick="start()">Empezar</button>                             
     
             </div>
            

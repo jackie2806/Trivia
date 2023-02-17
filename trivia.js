@@ -19,6 +19,8 @@ function start(){
 
 function check(){
     let c= 0;
+    let uno = document.getElementById("uno-uno").value;
+    console.log(uno)
     let q1= document.quiz.question1.value;
     let q2= document.quiz.question2.value;
     let q3= document.quiz.question3.value;
