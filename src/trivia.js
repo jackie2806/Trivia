@@ -1,55 +1,63 @@
-let w = document.getElementById("welcome");
-let n= document.getElementById("i_name");
-let q= document.getElementById("quiz");
-q.style.display ="none";
 
-
-function start(){
-    if(n.value !=0 ){
-        let nameOfPlayer = document.getElementById("name-player");       
-        nameOfPlayer.innerHTML= "Hola,"+ " " + n.value;
-        w.style.display = "none";
-        q.style.display = "block"; 
-    } else {
-        alert("Ingresa tu nombre para empezar")
+const questions = [
+    {
+        question: "What is the capital of France?",
+        options: ["Paris", "Berlin", "London"],
+        answer: "Paris"
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Mars", "Venus", "Jupiter"],
+        answer: "Mars"
     }
-                 
+    // Add more
+];
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const nextButton = document.getElementById("nextButton");
+const resultElement = document.getElementById("result");
+
+let currentQuestionIndex = 0;
+
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+
+    optionsElement.innerHTML = "";
+    currentQuestion.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.innerHTML = `
+            <input type="radio" name="answer" value="${option}">
+            ${option}
+        `;
+        optionsElement.appendChild(label);
+    });
 }
 
-function check(){
+function checkAnswer() {
+    const selectedOption = document.querySelector("input[name='answer']:checked");
+    if (selectedOption) {
+        const answer = selectedOption.value;
+        const correctAnswer = questions[currentQuestionIndex].answer;
+        if (answer === correctAnswer) {
+            resultElement.textContent = "Correct!";
+        } else {
+            resultElement.textContent = `Incorrect. The correct answer is: ${correctAnswer}`;
+        }
+    }
+}
 
-    let c= 0;
-    console.log(c)
-    let q1= document.quiz.question1.value;
-    let q2= document.quiz.question2.value;
-    let q3= document.quiz.question3.value;
-    let q4= document.quiz.question4.value;
-    let q5= document.quiz.question5.value;
-    let quiz = document.getElementById("quiz");
-    
-    if(q1=="correct"){
-        c++
-    
-    };
-    if(q2=="correct"){
-        c++
-    
-    };
-    if(q3=="correct"){
-        c++
-    
-    };
-    if(q4=="correct"){
-        c++
-    
-    };
-    if(q5=="correct"){
-        c++
-        
-    };    
-    
-    quiz.innerHTML= `Tu puntuación es `+ ` ` +`${c}`;
-
-}    
-
-
+nextButton.addEventListener("click", () => {
+    checkAnswer();
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+        resultElement.textContent = "";
+    } else {
+        questionElement.textContent = "Trivia completed!";
+        optionsElement.innerHTML = "";
+        nextButton.style.display = "none";
+        resultElement.textContent = "";
+    }
+});
