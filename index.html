@@ -11,36 +11,33 @@
     <main id="main" class="main"> 
        
         <section id="welcome" >
-            <div id="" >
-                <h1 class="main__header__title"> Hola </h1>
-                <p class="main__header__text">Juanita<p/>
-            </div> 
-                                         
-            <div name="quotation" id="quotation" class="main__welcome__quotation">           
-
-                <input name="name" id="i_name" type="text" placeholder="Ingresa tu nombre">
-                <button id="btn_start">Empezar</button>                            
+                                                 
+            <div id="start" class="container" >           
+                <p>Bienvenido</p>
+                <input id="playerName" type="text" placeholder="Ingresa tu nombre" value=""></input>
+                <button id="startButton">Empezar</button>                            
     
             </div>          
                                     
         </section>
 
         <section id="quiz" class="main__quiz">
+            <div >
+
+            </div>
            
-            <div class="card">
-                <div class="question-number">Question 1</div>
-                <div class="question">What is the capital of France?</div>
-                <div class="options">
-                    <button>Paris</button>
-                    <button>London</button>
-                    <button>Berlin</button>
-                </div>
+            <div class="container">
+                <h1>Trivia App</h1>
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+                <button id="nextButton">Next</button>
+                <div class="result" id="result"></div>
             </div>
                        
         </section>              
     
     </main>
-    
+    <script src="/src/trivia.js"> </script>
 </body>
-<script src="/src/trivia.js"> </script>
+
 </html>
